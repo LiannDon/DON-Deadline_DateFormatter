@@ -1,0 +1,22 @@
+import datetime
+
+# 1. Ask for the required inputs
+event_title = input("Enter event title: ").strip()
+year = int(input("Enter year: "))
+month = int(input("Enter month (1-12): "))
+day = int(input("Enter day (1-31): "))
+
+# 2. Create the Python date object
+event_date = datetime.date(year, month, day)
+
+# 3. Format the outputs
+formatted_title = event_title.upper()        # Or use .title() for proper format
+readable_date = event_date.strftime("%B %d, %Y")
+weekday_name = event_date.strftime("%A")
+
+# 4. Display all required outputs
+print("\n--- Event Deadline Details ---")
+print("Event Title:", formatted_title)
+print("Readable Date:", readable_date)
+print("Year, Month, Day:", event_date.year, event_date.month, event_date.day)
+print("Weekday:", weekday_name)
